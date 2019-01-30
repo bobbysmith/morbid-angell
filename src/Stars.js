@@ -15,11 +15,9 @@ export default class Stars extends Component {
 
   generateStars = () => {
     const w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    screenWidth = w.innerWidth || e.clientWidth || g.clientWidth,
-    screenHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
+    g = document.getElementsByTagName('body')[0],
+    screenWidth = g.clientWidth || w.innerWidth,
+    screenHeight = g.clientHeight || w.innerHeight;
 
     const stars = [...Array(this.numberOfStars(screenWidth)).keys()];
 
