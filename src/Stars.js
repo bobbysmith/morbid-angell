@@ -17,7 +17,7 @@ export default class Stars extends Component {
     const w = window,
     g = document.getElementsByTagName('body')[0],
     screenWidth = g.clientWidth || w.innerWidth,
-    screenHeight = g.clientHeight || w.innerHeight;
+    screenHeight = (g.clientHeight || w.innerHeight) + 100;
 
     const stars = [...Array(this.numberOfStars(screenWidth)).keys()];
 
