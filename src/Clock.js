@@ -27,9 +27,22 @@ export default class Clock extends Component {
     clearInterval(this.interval);
   }
 
+  convertUTCDateToLocalDate = (date) => {
+    const newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+
+    const offset = date.getTimezoneOffset() / 60;
+    const hours = date.getHours();
+
+    newDate.setHours(hours - offset);
+
+    return newDate;
+}
+
   calculateCountdown = () => {
     const { timeSet } = this.state;
-    let difference = (Date.parse(new Date(DUE_DATE)) - Date.parse(new Date())) / 1000;
+    let difference = (
+      Date.parse(new Date((DUE_DATE))) - Date.parse(this.convertUTCDateToLocalDate(new Date()))
+    ) / 1000;
 
     if (!timeSet) {
       this.setState({ timeSet: true });
