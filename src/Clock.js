@@ -93,7 +93,7 @@ export default class Clock extends Component {
       return (
         <div className="clockContainer congrats">
           <span className="metal" role="img" aria-label="baby">👶🏻</span>
-          Welcome Baby Angell
+          Happy Birthday Baby Angell
           <span className="metal" role="img" aria-label="baby">👶🏻</span>
         </div>
       );

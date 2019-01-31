@@ -14,7 +14,10 @@
     display: flex;
 
     div {
-      margin-right: 1em;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-right: .75em;
 
       @media screen and (max-width: 415px) {
         margin-right: .5em;
@@ -25,10 +28,10 @@
       }
 
       span {
-        font-size: 3em;
+        font-size: 4em;
 
         @media screen and (max-width: 415px) {
-          font-size: 2em;
+          font-size: 3em;
         }
 
         &.label {
@@ -42,6 +45,7 @@
     }
   }
 
+
   .metal {
     transform: rotate(-20deg);
 
@@ -50,11 +54,7 @@
     }
 
     span {
-      font-size: 3em;
-
-      @media screen and (max-width: 415px) {
-        font-size: 2em;
-      }
+      font-size: 4em;
     }
   }
 
